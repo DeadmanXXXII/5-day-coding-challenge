@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation: Proxmox and Kubernetes Node Networking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Technical Documentation</h1>
+            <h2>Proxmox and Kubernetes Node Networking</h2>
+            <p>Learn how to configure networking for Proxmox and Kubernetes nodes</p>
+        </header>
+        <section class="content">
+            <div class="documentation">
+                <h2>Documentation</h2>
+                <p>Below you'll find written instructions along with source code snippets and useful links for configuring networking for Proxmox and Kubernetes nodes.</p>
+                <h3>Proxmox Networking Configuration</h3>
+                <p>Step 1: Edit the network interface file:</p>
+                <pre><code>sudo nano /etc/network/interfaces</code></pre>
+                <p>Step 2: Add the following lines for a static IP address:</p>
+                <pre><code>auto ens18
+iface ens18 inet static
+    address 192.168.1.100
+    netmask 255.255.255.0
+    gateway 192.168.1.1</code></pre>
+                <p>Step 3: Save the file and exit the editor.</p>
+                <p>For more detailed information, refer to the <a href="https://pve.proxmox.com/wiki/Network_Configuration" target="_blank">Proxmox Networking Configuration Guide</a>.</p>
+                <h3>Kubernetes Node Networking</h3>
+                <p>Step 1: Install and configure Calico for Kubernetes networking:</p>
+                <pre><code>kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml</code></pre>
+                <p>Step 2: Verify that Calico is running:</p>
+                <pre><code>kubectl get pods -n kube-system</code></pre>
+                <p>Step 3: Configure network policies as needed for your Kubernetes cluster.</p>
+                <p>For more detailed information, refer to the <a href="https://kubernetes.io/docs/concepts/cluster-administration/networking/" target="_blank">Kubernetes Networking Guide</a>.</p>
+            </div>
+            <div class="avatar">
+                <img src="avatar.jpg" alt="Avatar">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

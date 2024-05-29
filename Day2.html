@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Interaction Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Interaction Survey</h1>
+        <form>
+            <div class="question">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="question">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="100" required>
+            </div>
+            <div class="question">
+                <p>How often do you use the internet?</p>
+                <label><input type="radio" name="internet-usage" value="daily"> Daily</label>
+                <label><input type="radio" name="internet-usage" value="weekly"> Weekly</label>
+                <label><input type="radio" name="internet-usage" value="occasionally"> Occasionally</label>
+                <label><input type="radio" name="internet-usage" value="rarely"> Rarely</label>
+            </div>
+            <div class="question">
+                <p>Which social media platforms do you use? (Select all that apply)</p>
+                <label><input type="checkbox" name="social-media" value="facebook"> Facebook</label>
+                <label><input type="checkbox" name="social-media" value="twitter"> Twitter</label>
+                <label><input type="checkbox" name="social-media" value="instagram"> Instagram</label>
+                <label><input type="checkbox" name="social-media" value="linkedin"> LinkedIn</label>
+                <label><input type="checkbox" name="social-media" value="snapchat"> Snapchat</label>
+            </div>
+            <div class="question">
+                <label for="feedback">Any additional comments or feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
